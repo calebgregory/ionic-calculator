@@ -7,6 +7,11 @@ div {
   padding: 3px;
 }
 
+.display {
+  text-align: left;
+  font-size: 24px;
+}
+
 .trig {
   background: #60CCAA;
 }

@@ -29,52 +29,51 @@
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
+        <h1 class="title">My Very Own Mobile Calculator</h1>
       </ion-header-bar>
       <ion-content>
-        <!-- OUR STUFF HERE -->
         <div class="row">
-          <div class="col">{{display}}</div>
+          <div class="col display">{{display}}</div>
         </div>
         <div class="button-bar">
-          <a class="button">\(x^{2}\)</a>
-          <a class="button trig">\(sin\)</a>
-          <a class="button trig">\(cos\)</a>
-          <a class="button trig">\(tan\)</a>
+          <a class="button" ng-click="funcIs(square)">\(x^{2}\)</a>
+          <a class="button trig" ng-click="funcIs(sin)">\(sin\)</a>
+          <a class="button trig" ng-click="funcIs(cos)">\(cos\)</a>
+          <a class="button trig" ng-click="funcIs(tan)">\(tan\)</a>
         </div>
         <div class="button-bar">
-          <a class="button">\(\sqrt{x}\)</a>
-          <a class="button trig">\(sin^{-1}\)</a>
-          <a class="button trig">\(cos^{-1}\)</a>
-          <a class="button trig">\(tan^{-1}\)</a>
+          <a class="button" ng-click="funcIs(sqrt)">\(\sqrt{x}\)</a>
+          <a class="button trig" ng-click="funcIs(asin)">\(sin^{-1}\)</a>
+          <a class="button trig" ng-click="funcIs(acos)">\(cos^{-1}\)</a>
+          <a class="button trig" ng-click="funcIs(atan)">\(tan^{-1}\)</a>
         </div>
         <div class="button-bar">
-          <a class="button">1</a>
-          <a class="button">2</a>
-          <a class="button">3</a>
-          <a class="button oper">\(\div\)</a>
+          <a class="button" ng-click="digit(1)">1</a>
+          <a class="button" ng-click="digit(2)">2</a>
+          <a class="button" ng-click="digit(3)">3</a>
+          <a class="button oper" ng-click="funcIs(divide)">\(\div\)</a>
         </div>
         <div class="button-bar">
-          <a class="button">4</a>
-          <a class="button">5</a>
-          <a class="button">6</a>
-          <a class="button oper">\(*\)</a>
+          <a class="button" ng-click="digit(4)">4</a>
+          <a class="button" ng-click="digit(5)">5</a>
+          <a class="button" ng-click="digit(6)">6</a>
+          <a class="button oper" ng-click="funcIs(multiply)">\(*\)</a>
         </div>
         <div class="button-bar">
-          <a class="button">7</a>
-          <a class="button">8</a>
-          <a class="button">9</a>
-          <a class="button oper">\(+\)</a>
+          <a class="button" ng-click="digit(7)">7</a>
+          <a class="button" ng-click="digit(8)">8</a>
+          <a class="button" ng-click="digit(9)">9</a>
+          <a class="button oper" ng-click="funcIs(add)">\(+\)</a>
         </div>
         <div class="button-bar">
-          <a class="button">0</a>
-          <a class="button"></a>
-          <a class="button">.</a>
-          <a class="button oper">\(-\)</a>
+          <a class="button" ng-click="digit(0)">0</a>
+          <a class="button" disabled></a>
+          <a class="button" ng-click="digit('.')">.</a>
+          <a class="button oper" ng-click="funcIs(subtract)">\(-\)</a>
         </div>
         <div class="button-bar">
-          <a class="button clear">clear</a>
-          <a class="button enter">enter</a>
+          <a class="button clear" ng-click="clear()">clear</a>
+          <a class="button enter" ng-click="enter()">enter</a>
         </div>
       </ion-content>
     </ion-pane>
