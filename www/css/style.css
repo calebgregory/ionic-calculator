@@ -1,1 +1,24 @@
 /* Empty. Add your own CSS if you like */
+div {
+  height: 50px;
+  text-align: center;
+  border: 1px red;
+  margin: 2px;
+  padding: 3px;
+}
+
+.trig {
+  background: #60CCAA;
+}
+
+.oper {
+  background: #D1FFFE;
+}
+
+.enter {
+  background: #99761A;
+}
+
+.clear {
+  background: #FFC892;
+}
