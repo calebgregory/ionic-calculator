@@ -1,10 +1,21 @@
 /* Empty. Add your own CSS if you like */
 div {
-  height: 50px;
   text-align: center;
   border: 1px red;
   margin: 2px;
   padding: 3px;
+}
+
+#title-bar {
+  background-color: #333;
+}
+
+#rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .display {
@@ -12,18 +23,26 @@ div {
   font-size: 24px;
 }
 
+.square {
+  background: #2466A0;
+  color: #fff;
+}
+
 .trig {
-  background: #60CCAA;
+  background: #4DA2ED;
+  color: #fff;
 }
 
 .oper {
-  background: #D1FFFE;
+  background: #B0BA2A;
 }
 
 .enter {
-  background: #99761A;
+  background: #99A02C;
+  color: #fff;
 }
 
 .clear {
-  background: #FFC892;
+  background: #F06D66;
+  color: #fff;
 }

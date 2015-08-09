@@ -28,21 +28,21 @@
   <body ng-app="app" ng-controller="MainCtrl">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">My Very Own Mobile Calculator</h1>
+      <ion-header-bar class="bar-stable" id="title-bar">
+        <h1 class="title" id="rainbow">*~ my very own calculator ~*</h1>
       </ion-header-bar>
       <ion-content>
         <div class="row">
           <div class="col display">{{display}}</div>
         </div>
         <div class="button-bar">
-          <a class="button" ng-click="funcIs(square)">\(x^{2}\)</a>
+          <a class="button square" ng-click="funcIs(square)">\(x^{2}\)</a>
           <a class="button trig" ng-click="funcIs(sin)">\(sin\)</a>
           <a class="button trig" ng-click="funcIs(cos)">\(cos\)</a>
           <a class="button trig" ng-click="funcIs(tan)">\(tan\)</a>
         </div>
         <div class="button-bar">
-          <a class="button" ng-click="funcIs(sqrt)">\(\sqrt{x}\)</a>
+          <a class="button square" ng-click="funcIs(sqrt)">\(\sqrt{x}\)</a>
           <a class="button trig" ng-click="funcIs(asin)">\(sin^{-1}\)</a>
           <a class="button trig" ng-click="funcIs(acos)">\(cos^{-1}\)</a>
           <a class="button trig" ng-click="funcIs(atan)">\(tan^{-1}\)</a>
