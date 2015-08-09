@@ -25,31 +25,9 @@ angular
       $scope.newLine = false; // sets up display to have next value concatenated to it
     };
 
-    // user presses enter, executing function
-    // if no function has been pressed, executes defaultF.
-    $scope.enter = function() {
-      // parse value of current display, and add to cache
-      $scope.cache.unshift(parseFloat($scope.display));
-      // execute function on cache
-      c = $scope.cache;
-      $scope.display = $scope.f(c[0],c[1]);
-      // setup for next entry
-      $scope.newLine = true;
-      // add resulting value, stored as the display, to cache
-      $scope.cache = [parseFloat($scope.display), 0]; // keeps cache tidy
-    };
-
-    // reset to default
-    $scope.clear = function() {
-      $scope.display = 0;
-      $scope.cache = [0];
-      $scope.newLine = true;
-      $scope.f = defaultF;
-    };
-
-    // returns current displayed value
-    function defaultF() {
-      return $scope.cache.shift();
+    // toggle the sign of display value
+    $scope.posneg = function() {
+      $scope.display = parseFloat($scope.display) * -1;
     };
 
     // make functions accessible to $scope
