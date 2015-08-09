@@ -61,4 +61,37 @@ angular
       if ($scope.f.length < 2) { $scope.enter(); }
     };
 
+    // user presses enter, executing function
+    // if no function has been pressed, executes defaultF.
+    $scope.enter = function() {
+      // parse value of current display, and add to cache
+      $scope.cache.unshift(parseFloat($scope.display));
+      // execute function on cache
+      c = $scope.cache;
+      $scope.display = $scope.f(c[0],c[1]);
+      // add resulting value, stored as the display, to cache
+      $scope.cache = [parseFloat($scope.display), 0]; // keeps cache tidy
+      // make sure result is a number
+      if (isNaN(parseInt($scope.display))) {
+        $scope.display = "nope";
+        $scope.cache = [0]; // we don't want any NaN's hanging in our cache
+      };
+      // setup for next entry
+      $scope.newLine = true;
+    };
+
+    // reset to default
+    $scope.clear = function() {
+      $scope.display = 0;
+      $scope.cache = [0];
+      $scope.newLine = true;
+      $scope.f = defaultF;
+    };
+
+    // returns current displayed value
+    function defaultF() {
+      return $scope.cache.shift();
+    };
+
+
   }]);
